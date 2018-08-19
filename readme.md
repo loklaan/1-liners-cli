@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Copy common util functions to clipboard, courtesy of [**`1-liners`**](https://github.com/1-liners/1-liners).
+  Copy common util functions to clipboard, courtesy of <a href="https://github.com/1-liners/1-liners"><strong><code>1-liners</code></strong></a>
 </p>
 
 ## Quick Start
