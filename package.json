@@ -16,11 +16,11 @@
   },
   "dependencies": {
     "1-liners": "^0.4.0",
-    "@babel/core": "^7.0.0-rc.1",
-    "chalk": "^2.4.1",
+    "@babel/core": "^7.2.2",
+    "chalk": "^2.4.2",
     "clipboardy": "^1.2.3",
     "fuzzy": "^0.1.3",
-    "inquirer": "^6.1.0",
+    "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1",
     "meow": "^5.0.0"
   }
