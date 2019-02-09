@@ -1,6 +1,6 @@
 {
   "name": "1-liners-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI for copying code from \"1-liners\" project.",
   "main": "index.js",
   "repository": "git@github.com:loklaan/1-liners-cli.git",
