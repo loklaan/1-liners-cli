@@ -24,9 +24,9 @@
     "dist/"
   ],
   "dependencies": {
-    "1-liners": "0.4.0",
+    "1-liners": "0.4.2",
     "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.8.3",
     "@babel/plugin-transform-react-jsx": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/register": "^7.8.3",
