@@ -1,30 +1,40 @@
 {
   "name": "1-liners-cli",
   "version": "1.0.3",
-  "description": "CLI for copying code from \"1-liners\" project.",
-  "main": "index.js",
+  "description": "Find and copy the source of a 1-liners function",
   "repository": "git@github.com:loklaan/1-liners-cli.git",
   "author": "Lochlan Bunn <bunn@lochlan.io>",
   "license": "MIT",
   "keywords": [
+    "1-liners",
+    "code-gen",
+    "code-generation",
+    "clipboard",
     "oneliners",
     "shorthands",
     "cli"
   ],
+  "main": "index.js",
   "bin": {
-    "1-liners": "./index.js"
+    "1-liners": "index.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "src/"
   ],
   "dependencies": {
-    "1-liners": "^0.4.0",
+    "1-liners": "0.4.0",
     "@babel/core": "^7.2.2",
-    "chalk": "^2.4.2",
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "cardinal": "^2.1.1",
     "clipboardy": "^1.2.3",
     "fuzzy": "^0.1.3",
-    "inquirer": "^6.2.2",
-    "inquirer-autocomplete-prompt": "^1.0.1",
-    "meow": "^5.0.0"
+    "ink": "^2.6.0",
+    "ink-text-input": "^3.2.2",
+    "meow": "^5.0.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "terminal-link": "^2.1.1"
   }
 }
