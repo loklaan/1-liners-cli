@@ -180,7 +180,7 @@ class App extends React.Component {
         )}
         {this.state.fnNameCopied && (
           <Box marginTop={1} marginLeft={2}>
-            <Text>Copied "<Color underline>{this.state.fnNameCopied}</Color>" to clipboard.</Text>
+            <Text>Copied "<Color underline>{Services.stripMatchTokens(this.state.fnNameCopied)}</Color>" to clipboard.</Text>
           </Box>
         )}
 

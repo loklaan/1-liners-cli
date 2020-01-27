@@ -2,6 +2,7 @@ module.exports = {
   highlightedTextToElements,
   fetchOneLinerNames,
   fetchOneLinerCode,
+  stripMatchTokens,
   fuzzyFilterList,
   getDesc,
 };
@@ -61,6 +62,10 @@ function getOneLinerDir () {
   return path.resolve(path.dirname(require.resolve('1-liners')), 'module');
 }
 
+function stripMatchTokens (str) {
+  return str.replace(/[<>]/g, '');
+}
+
 async function fetchOneLinerNames () {const util = require('util');
   const path = require('path');
   const fs = require('fs');
@@ -83,7 +88,7 @@ async function fetchOneLinerCode (fnName) {
   const readFile = util.promisify(fs.readFile);
 
   if (!fnName) return '';
-  fnName = fnName.replace(/[<>]/g, '');
+  fnName = stripMatchTokens(fnName);
   // So as not to clash with any inbuilts or ponyfills
   const cacheName = `_____${fnName}`
   if (cacheName in codeCache) return codeCache[cacheName];
