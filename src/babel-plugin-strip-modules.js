@@ -15,8 +15,17 @@ module.exports = function babelPluginStripModules(fnName) {
             let node = nodes[0];
             const isExportDefault = node.type === "ExportDefaultDeclaration";
             if (isExportDefault) {
+              let fnExpression = node.declaration;
+              if (fnExpression.type === "FunctionDeclaration") {
+                fnExpression = t.arrowFunctionExpression(
+                  fnExpression.params,
+                  fnExpression.body,
+                  fnExpression.async
+                )
+              }
+
               const constNode = t.variableDeclaration("const", [
-                t.variableDeclarator(t.identifier(fnName), node.declaration),
+                t.variableDeclarator(t.identifier(fnName), fnExpression),
               ]);
               constNode.leaderComments = null;
               constNode.trailingComments = null;

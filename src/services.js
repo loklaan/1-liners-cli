@@ -84,7 +84,7 @@ async function fetchOneLinerNames() {
   const oneLinersFiles = await readdir(getOneLinerDir());
   const oneLinersNames = oneLinersFiles.map((fileName) =>
     path.basename(fileName, ".js")
-  );
+  ).filter(name => name !== 'index');
 
   return oneLinersNames;
 }

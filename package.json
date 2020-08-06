@@ -20,6 +20,7 @@
   },
   "files": [
     "index.js",
+    "test.js",
     "src/",
     "dist/"
   ],
@@ -42,6 +43,10 @@
   },
   "scripts": {
     "start": "babel src -d dist --watch",
+    "test": "ava",
     "prepublishOnly": "babel src -d dist --minified"
+  },
+  "devDependencies": {
+    "ava": "^3.11.1"
   }
 }
