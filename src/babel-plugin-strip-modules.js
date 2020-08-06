@@ -1,8 +1,8 @@
 /**
  * Strips module syntax and comments.
  */
-module.exports = function babelPluginStripModules (fnName) {
-  return function ({types: t}) {
+module.exports = function babelPluginStripModules(fnName) {
+  return function ({ types: t }) {
     return {
       visitor: {
         Program(path) {
@@ -13,16 +13,11 @@ module.exports = function babelPluginStripModules (fnName) {
 
             // Swap "export default" for const
             let node = nodes[0];
-            const isExportDefault = node.type === 'ExportDefaultDeclaration';
+            const isExportDefault = node.type === "ExportDefaultDeclaration";
             if (isExportDefault) {
-              const constNode = t.variableDeclaration(
-                'const', [
-                  t.variableDeclarator(
-                    t.identifier(fnName),
-                    node.declaration
-                  )
-                ]
-              );
+              const constNode = t.variableDeclaration("const", [
+                t.variableDeclarator(t.identifier(fnName), node.declaration),
+              ]);
               constNode.leaderComments = null;
               constNode.trailingComments = null;
               node = constNode;
@@ -34,8 +29,8 @@ module.exports = function babelPluginStripModules (fnName) {
           } catch (err) {
             debugger;
           }
-        }
-      }
+        },
+      },
     };
-  }
-}
+  };
+};

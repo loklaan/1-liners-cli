@@ -1,11 +1,11 @@
 const codeCache = {};
 
 const Tokens = {
-  BEFORE: '<',
-  AFTER: '>',
-}
+  BEFORE: "<",
+  AFTER: ">",
+};
 
 module.exports = {
   codeCache,
-  Tokens
-}
+  Tokens,
+};
